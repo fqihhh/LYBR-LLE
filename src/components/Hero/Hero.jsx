@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import bgImage from "../../assets/bege.jpg";
 
 const Hero = () => {
   useEffect(() => {
@@ -27,6 +28,12 @@ const Hero = () => {
       id="hero"
       className="relative flex flex-col justify-center items-center min-h-screen text-center overflow-hidden opacity-0"
     >
+      {/* Background image placed as an absolutely positioned <img> for reliable rendering */}
+      <img
+        src={bgImage}
+        alt="LYBRÉLLE background"
+        className="absolute inset-0 w-full h-full object-cover z-[0] pointer-events-none"
+      />
       {/* INTRO */}
       <div
         id="intro"
