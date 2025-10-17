@@ -2,12 +2,11 @@ import React from "react";
 import apa1 from "../../assets/apa1.jpg";
 import apa2 from "../../assets/apa2.jpg";
 
-
 const About = () => {
   return (
     <section className="max-w-6xl mx-auto px-6 md:px-10 py-16 bg-white text-gray-900">
       {/* Heading */}
-      <div className="text-left max-w-4xl mx-auto mb-14">
+      <div className="text-left max-w-4xl mx-auto mb-14 mr-45">
         <h1 className="text-3xl md:text-4xl font-semibold leading-snug mb-4">
           MudaMuse didirikan untuk menginspirasi Anda menjadi versi terbaik dari diri
           sendiri. Tujuan kami adalah menghadirkan pakaian yang membalut Anda dengan
@@ -24,7 +23,7 @@ const About = () => {
         </p>
         <p>
           Temukan gaya yang sesuai dengan kepribadian Anda dan rasakan perbedaannya.
-          MudaMuse hadir untuk menemani setiap langkah perjalanan Anda menuju versi
+          LYBRÉLLE hadir untuk menemani setiap langkah perjalanan Anda menuju versi
           terbaik diri Anda.
         </p>
       </div>
@@ -36,18 +35,17 @@ const About = () => {
           <img
             src={apa2}
             alt="Model duduk mengenakan koleksi MudaMuse"
-            className="object-cover w-full h-auto rounded-md"
+            className="object-cover w-full h-auto rounded-md grayscale hover:grayscale-0 transition duration-500 ease-in-out"
             loading="lazy"
           />
         </div>
 
-
         <div className="flex flex-col justify-between">
           <div className="bg-gray-100 flex items-center justify-center p-2 mb-6 rounded-lg shadow-sm">
             <img
-              src={apa1} 
+              src={apa1}
               alt="Model berdiri mengenakan koleksi MudaMuse"
-              className="object-cover w-[85%] h-auto mx-auto rounded-md"
+              className="object-cover w-[85%] h-auto mx-auto rounded-md grayscale hover:grayscale-0 transition duration-500 ease-in-out"
               loading="lazy"
             />
           </div>
@@ -73,3 +71,4 @@ const About = () => {
 };
 
 export default About;
+
