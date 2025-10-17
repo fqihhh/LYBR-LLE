@@ -1,59 +1,49 @@
 import { useEffect } from "react";
 import bgImage from "../../assets/bege.jpg";
-import "./Hero.css"; // nanti taruh animasinya di sini
+import "./Hero.css";
 
 const Hero = () => {
-  useEffect(() => {
-    const intro = document.getElementById("intro");
-    const introTitle = document.getElementById("intro-title");
-    const hero = document.getElementById("hero");
-    const navbar = document.getElementById("navbar");
+ useEffect(() => {
+  const intro = document.getElementById("intro");
+  const hero = document.getElementById("hero");
+  const navbar = document.getElementById("navbar");
 
+  setTimeout(() => {
+    intro.classList.add("intro-slide-away"); // ganti animasi smooth
     setTimeout(() => {
-      introTitle.classList.add("rise-up");
-      setTimeout(() => {
-        intro.classList.add("fade-out");
-      }, 1200);
-      setTimeout(() => {
-        intro.style.display = "none";
-        hero.classList.remove("opacity-0");
-        navbar?.classList.remove("opacity-0");
+      intro.style.display = "none";
+      hero.classList.remove("opacity-0");
+      navbar?.classList.remove("opacity-0");
+      document.body.classList.remove("bg-[#0c0c0c]");
+      document.body.classList.add("bg-white");
+    }, 2600); // sesuai durasi animasi
+  }, 2500);
+}, []);
 
-        document.body.classList.remove("bg-[#0c0c0c]");
-        document.body.classList.add("bg-white");
-      }, 1800);
-    }, 2500);
-  }, []);
 
   return (
     <>
-      {/* INTRO - harus di luar hero */}
-      <div
-        id="intro"
-        className="fixed inset-0 flex flex-col justify-center items-center bg-black z-50 text-center"
-      >
-        <h1
-          id="intro-title"
-          className="text-6xl sm:text-7xl font-bold tracking-widest mb-3 animate-pulse text-white"
-        >
-          LYBRÉLLE
-        </h1>
-        <p className="text-gray-400 text-sm tracking-widest">
-          loading your vibe...
-        </p>
-      </div>
+      {/* INTRO */}
+      <div id="intro" className="fixed inset-0 flex flex-col justify-center items-center bg-black z-50 text-center overflow-hidden">
+  <h1 id="intro-title" className="text-6xl sm:text-7xl font-bold tracking-widest mb-3 text-white fade-text">
+    LYBRÉLLE
+  </h1>
+  <p className="text-gray-400 text-sm tracking-widest fade-text">
+    loading your vibe...
+  </p>
+</div>
+
 
       {/* HERO */}
       <section
         id="hero"
-        className="relative flex flex-col justify-center items-center min-h-screen text-center overflow-hidden opacity-0"
+        className="relative flex flex-col justify-center items-center min-h-screen text-center overflow-hidden opacity-0 transition-opacity duration-[1200ms] ease-[cubic-bezier(0.25,0.1,0.25,1)]"
       >
         <img
           src={bgImage}
           alt="LYBRÉLLE background"
-          className="absolute inset-0 w-full h-full object-cover z-[0] pointer-events-none"
+          className="absolute inset-0 w-full h-full object-cover z-[0]"
         />
-
         <div className="absolute inset-0 bg-black/40 z-[1]" />
 
         <div className="relative z-[5] flex flex-col items-center mt-16 text-white">
@@ -61,17 +51,11 @@ const Hero = () => {
             Contemporary Fashion Studio
           </p>
 
-          <h1
-            id="hero-title"
-            className="text-[70px] sm:text-[110px] font-extrabold tracking-wider fade-up"
-          >
+          <h1 className="text-[70px] sm:text-[110px] font-extrabold tracking-wider fade-up">
             LYBRÉLLE
           </h1>
 
-          <p
-            id="hero-sub"
-            className="text-gray-200 text-lg mt-4 mb-8 max-w-xl fade-up"
-          >
+          <p className="text-gray-200 text-lg mt-4 mb-8 max-w-xl fade-up">
             Redefine your vibe — gabung ke dunia fashion yang ngebawa karakter
             lo.
             <br />
@@ -80,10 +64,7 @@ const Hero = () => {
           </p>
 
           <div className="flex gap-4 fade-up">
-            <button
-              id="discoverBtn"
-              className="bg-white text-black py-3 px-8 rounded-full hover:scale-105 transition-transform duration-300"
-            >
+            <button className="bg-white text-black py-3 px-8 rounded-full hover:scale-105 transition-transform duration-300">
               Discover Collections
             </button>
             <button className="border border-white py-3 px-8 rounded-full hover:bg-white hover:text-black transition-all duration-300">
