@@ -1,38 +1,37 @@
-    @keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes riseUp {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-220px);
-    opacity: 1;
-  }
-}
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.fade-up {
-  animation: fadeUp 1s ease-out forwards;
-}
-.rise-up {
-  animation: riseUp 1s ease-in-out forwards;
-}
-.fade-out {
-  animation: fadeOut 0.8s ease-in forwards;
-}
+  @keyframes fadeUp {
+        0% {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes riseUp {
+        0% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-220px);
+          opacity: 1;
+        }
+      }
+      @keyframes fadeOut {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      .fade-up {
+        animation: fadeUp 1s ease-out forwards;
+      }
+      .rise-up {
+        animation: riseUp 1s ease-in-out forwards;
+      }
+      .fade-out {
+        animation: fadeOut 0.8s ease-in forwards;
+      }
