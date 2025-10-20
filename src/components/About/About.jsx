@@ -8,9 +8,8 @@ const About = () => {
       {/* Heading */}
       <div className="text-left max-w-4xl mx-auto mb-14 mr-45">
         <h1 className="text-3xl md:text-4xl font-semibold leading-snug mb-4">
-          MudaMuse didirikan untuk menginspirasi Anda menjadi versi terbaik dari diri
-          sendiri. Tujuan kami adalah menghadirkan pakaian yang membalut Anda dengan
-          kualitas, desain, dan kenyamanan.
+          LYBRÉLLE was created to inspire you to be the best version of yourself.
+           Our goal is to bring you clothes that blanket you in quality, design, and comfort.
         </h1>
       </div>
 
@@ -53,7 +52,7 @@ const About = () => {
           <p className="text-gray-600 mb-6">
             Setiap produk kami dibuat dengan bahan pilihan dan desain yang timeless.
             Kami ingin Anda merasa nyaman dan percaya diri setiap kali mengenakan
-            MudaMuse.       
+            LYBRÉLLE.       
           </p>
 
           <button
