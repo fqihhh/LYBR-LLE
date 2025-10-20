@@ -1,5 +1,5 @@
 import React from 'react';
-import './FeaturedCollections.css'; // optional: for font setup if needed
+
 
 const Featured = () => {
   return (
