@@ -9,8 +9,8 @@ function App() {
     <>
       <Header />
       <Hero />
-      <About />
       <New />
+      <About />
     </>
   );
 }
