@@ -1,33 +1,44 @@
-import React from "react";
-import "./Featured.css";
+import React from 'react';
+import './FeaturedCollections.css'; // optional: for font setup if needed
 
 const Featured = () => {
   return (
-    <section className="featured-section">
-      <div className="container">
-        <h2 className="title">Featured Collections</h2>
-        <p className="subtitle">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra morbi
-          cras augue egestas dictum habitasse. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Viverra morbi cras augue egestas dictum
-          habitasse.
-        </p>
+    <section className="px-6 py-16 max-w-6xl mx-auto text-gray-800 bg-white font-spaceGrotesk">
+      {/* Heading */}
+      <h2 className="text-4xl font-semibold mb-4 text-left">Featured Collections</h2>
+      <p className="text-gray-600 text-left max-w-3xl mb-10 leading-relaxed">
+        Temukan koleksi outfit dan shirts yang dirancang untuk gaya santai namun tetap berkarakter. 
+        Dengan sentuhan streetwear dan bahan nyaman, setiap item mencerminkan kebebasan berekspresi 
+        dan kualitas desain khas MudaMuse.
+      </p>
 
-        <div className="collections">
-          <div className="collection-item">
+      {/* Image Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Left Image */}
+        <div className="md:col-span-2">
+          <div className="relative group overflow-hidden rounded-lg shadow-md w-full max-w-[480px]">
             <img
-              src="https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=600&q=80"
-              alt="T-Shirts"
+              src="/tong1.png"
+              alt="Outfit"
+              className="w-full h-[700px] object-cover transition-transform duration-300 group-hover:scale-105"
             />
-            <span className="label">T-Shirts</span>
+            <div className="absolute bottom-4 left-4 bg-black/60 text-white px-4 py-2 rounded text-sm font-medium">
+              Outfit
+            </div>
           </div>
+        </div>
 
-          <div className="collection-item small">
+        {/* Right Image */}
+        <div className="flex items-center h-[700px]">
+          <div className="relative group overflow-hidden rounded-lg shadow-md w-full max-w-[480px] ml-[-72px]">
             <img
-              src="https://images.unsplash.com/photo-1593032465171-8ce12da6e8c9?auto=format&fit=crop&w=600&q=80"
+              src="/tong2.png"
               alt="Shirts"
+              className="w-full h-[600px] object-cover transition-transform duration-300 group-hover:scale-105"
             />
-            <span className="label arrow">Shirts ↗</span>
+            <div className="absolute bottom-4 left-4 bg-black/60 text-white px-4 py-2 rounded text-sm font-medium">
+              Skena →
+            </div>
           </div>
         </div>
       </div>
