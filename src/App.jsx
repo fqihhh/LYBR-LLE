@@ -12,9 +12,9 @@ function App() {
       <Header />
       <Hero />
       <New />
-      <Footer />
       <Featured />
       <About />
+      <Footer />
     </>
   );
 }
