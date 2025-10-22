@@ -5,7 +5,8 @@ import New from "./components/New/New";
 import Featured from "./components/Featured/Featured";
 import Footer from "./components/Footer/Footer";
 import Find from "./components/Find/Find";
-import { useState } from "react";
+// import Header from "./components/Header/Header";
+// import Find from "./components/Find/Find";
 
 function App() {
 
@@ -24,3 +25,7 @@ function App() {
 }
 
 export default App;
+
+
+
+

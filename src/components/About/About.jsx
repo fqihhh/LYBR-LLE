@@ -16,14 +16,13 @@ const About = () => {
       {/* Paragraphs */}
       <div className="grid md:grid-cols-2 gap-10 text-gray-600 mb-14">
         <p>
-          Kami percaya bahwa pakaian bukan hanya tentang penampilan, tetapi juga
-          tentang kenyamanan dan kepercayaan diri. Setiap koleksi kami dirancang dengan
-          perhatian pada detail dan kualitas terbaik.
+          We believe that clothing isn't just about looks, but also about comfort and confidence. 
+          Each of our collections is designed with attention to detail and the highest quality.
+
         </p>
         <p>
-          Temukan gaya yang sesuai dengan kepribadian Anda dan rasakan perbedaannya.
-          LYBRÉLLE hadir untuk menemani setiap langkah perjalanan Anda menuju versi
-          terbaik diri Anda.
+          Find the style that suits your personality and feel the difference. 
+          LYBRÉLLE is here to accompany you every step of the way to becoming your best version of yourself.
         </p>
       </div>
 
@@ -50,16 +49,15 @@ const About = () => {
           </div>
 
           <p className="text-gray-600 mb-6">
-            Setiap produk kami dibuat dengan bahan pilihan dan desain yang timeless.
-            Kami ingin Anda merasa nyaman dan percaya diri setiap kali mengenakan
-            LYBRÉLLE.       
+            Each of our products is crafted from carefully selected materials and timeless designs. 
+            We want you to feel comfortable and confident every time you wear LYBRÉLLE.     
           </p>
 
           <button
             type="button"
             className="bg-black text-white px-6 py-3 rounded-full w-fit hover:bg-gray-800 transition"
           >
-            Tentang Kami
+            ABOUT US
           </button>
         </div>
       </div>
