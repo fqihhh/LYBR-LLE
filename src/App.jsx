@@ -5,7 +5,6 @@ import About from "./components/About/About";
 import New from "./components/New/New";
 import Footer from "./components/Footer/Footer";
 import Featured from "./components/Featured/Featured";
-
 function App() {
   return (
     <>
@@ -20,3 +19,7 @@ function App() {
 }
 
 export default App;
+
+
+
+
