@@ -63,7 +63,6 @@ const Find = () => {
       },
     },
   };
-
   const handleShowSetup = () => {
     setClicked(true);
     setTimeout(() => setShowImages(false), 1200);
@@ -75,7 +74,7 @@ const Find = () => {
 
   return (
     <section
-      className={`relative flex flex-col items-center justify-center min-h-screen overflow-hidden transition-all duration-1000 ${
+      className={`relative flex flex-col items-center justify-center h-screen overflow-hidden transition-all duration-1000 ${
         clicked ? "bg-white text-black" : "bg-black text-white"
       }`}
     >
@@ -104,7 +103,7 @@ const Find = () => {
           <div className="absolute bottom-0 left-0 w-full h-1/2 bg-black animate-splitBottom z-10"></div>
 
           {/* SETUP SECTION */}
-          <div className="z-20 text-center fade-in font-[Playfair_Display] mt-[-50px] px-6 mb-[70px]">
+          <div className="z-20 text-center fade-in font-[Playfair_Display] mt-[-50px] px-6 pb-0">
             <h2 className="text-4xl font-semibold mb-6 tracking-wide text-gray-900">
               Setup Your Outfit
             </h2>
@@ -171,24 +170,18 @@ const Find = () => {
             </button>
 
             {/* Gambar sesuai pilihan */}
-       {showImages && (
-  <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 fade-up">
-    {data[gender].styles[style].map((img, i) => (
-      <div
-        key={i}
-        className="relative w-full aspect-square overflow-hidden rounded-2xl shadow-md"
-      >
-        <img
-          src={img}
-          alt={`${gender}-${style}-${i}`}
-          className="w-full h-full object-cover transition-all duration-700 hover:scale-110 hover:grayscale-0 grayscale"
-          loading="lazy"
-        />
-      </div>
-    ))}
-  </div>
-)}
-
+            {showImages && (
+              <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 fade-up pb-10">
+                {data[gender].styles[style].map((img, i) => (
+                  <img
+                    key={i}
+                    src={img}
+                    alt={`${gender}-${style}-${i}`}
+                    className="w-full aspect-square object-cover rounded-2xl shadow-md hover:scale-105 transition-all duration-500 hover:grayscale-0 grayscale"
+                  />
+                ))}
+              </div>
+            )}
           </div>
         </>
       )}
