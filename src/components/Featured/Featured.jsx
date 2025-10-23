@@ -14,19 +14,14 @@ const Featured = () => {
         and an unapologetic sense of self.
       </p>
 
-      {/* Image Layout */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* Left Image */}
         <div className="md:col-span-2">
           <div className="relative group overflow-hidden rounded-lg shadow-md w-full max-w-[480px]">
             <img
-              src="https://i.pinimg.com/736x/9c/ec/43/9cec4308be07124f6da53278f230a51b.jpg"
+              src="https://i.pinimg.com/736x/e3/e7/c0/e3e7c0d34086b31942d945e54d052c99.jpg"
               alt="Outfit"
               className="w-full h-[700px] object-cover transition-transform duration-300 group-hover:scale-105"
             />
-            <div className="absolute bottom-4 left-4 bg-black/60 text-white px-4 py-2 rounded text-sm font-medium">
-              Outfit
-            </div>
           </div>
         </div>
 
@@ -38,9 +33,6 @@ const Featured = () => {
               alt="Shirts"
               className="w-full h-[600px] object-cover transition-transform duration-300 group-hover:scale-105"
             />
-            <div className="absolute bottom-4 left-4 bg-black/60 text-white px-4 py-2 rounded text-sm font-medium">
-              Skena →
-            </div>
           </div>
         </div>
       </div>

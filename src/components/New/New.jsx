@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const New = () => {
   const [isFormalDropdownOpen, setIsFormalDropdownOpen] = useState(false);
-  const [selectedFormalCategory, setSelectedFormalCategory] = useState("FORMAL");
+  const [selectedFormalCategory, setSelectedFormalCategory] = useState("");
 
   useEffect(() => {
     const formalMenu = document.getElementById("formalMenu");
@@ -88,37 +88,7 @@ const New = () => {
               onMouseEnter={() => setIsFormalDropdownOpen(true)}
               onMouseLeave={() => setIsFormalDropdownOpen(false)}
             >
-              <ul className="py-2">
-                <li>
-                  <a
-                    href="#"
-                    data-value="Men"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setSelectedFormalCategory("FORMAL Men");
-                      setIsFormalDropdownOpen(false);
-                    }}
-                  >
-                    Men
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    data-value="Women"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setSelectedFormalCategory("FORMAL Women");
-                      setIsFormalDropdownOpen(false);
-                    }}
-                  >
-                    Women
-                  </a>
-                </li>
-              </ul>
-            </div>
+            </div>  
           </div>
         </div>
       </section>
@@ -130,7 +100,7 @@ const New = () => {
               <img
                 src={product.image}
                 alt={product.name}
-                className="absolute inset-0 w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                className="absolute inset-0 w-full h-full object-cover rounded-lg"
               />
             </div>
             <p className="mt-3 text-lg font-semibold text-gray-900">{product.name}</p>

@@ -33,7 +33,7 @@ const About = () => {
           <img
             src={apa2}
             alt="Model duduk mengenakan koleksi MudaMuse"
-            className="object-cover w-full h-auto rounded-md grayscale hover:grayscale-0 transition duration-500 ease-in-out"
+            className="object-cover w-full h-auto rounded-md "
             loading="lazy"
           />
         </div>
@@ -43,7 +43,7 @@ const About = () => {
             <img
               src={apa1}
               alt="Model berdiri mengenakan koleksi MudaMuse"
-              className="object-cover w-[85%] h-auto mx-auto rounded-md grayscale hover:grayscale-0 transition duration-500 ease-in-out"
+              className="object-cover w-[85%] h-auto mx-auto rounded-md"
               loading="lazy"
             />
           </div>
