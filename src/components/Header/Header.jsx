@@ -1,34 +1,49 @@
-const Header = () => {
+const Header = ({ setPage }) => {
   return (
     <nav
       id="navbar"
-      className="fixed top-0 left-0 w-full z-40 bg-white/80 backdrop-blur-md shadow-sm opacity-0 transition-opacity duration-700"
+      className="fixed top-0 left-0 w-full z-40 bg-white/80 backdrop-blur-md shadow-sm opacity-100 transition-opacity duration-700"
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <h1 className="text-2xl font-extrabold tracking-widest text-gray-900">
+        <h1
+          onClick={() => setPage("home")}
+          className="text-2xl font-extrabold tracking-widest text-gray-900 cursor-pointer"
+        >
           LYBRÉLLE
         </h1>
 
         <ul className="hidden md:flex gap-8 text-gray-700 text-sm font-medium">
           <li>
-            <a href="#" className="hover:text-black transition">
+            <button
+              onClick={() => setPage("home")}
+              className="hover:text-black transition"
+            >
               Home
-            </a>
+            </button>
           </li>
           <li>
-            <a href="#" className="hover:text-black transition">
-              Collections
-            </a>
+            <button
+              onClick={() => setPage("Products")}
+              className="hover:text-black transition"
+            >
+              Products
+            </button>
           </li>
           <li>
-            <a href="#" className="hover:text-black transition">
+            <button
+              onClick={() => setPage("about")}
+              className="hover:text-black transition"
+            >
               About
-            </a>
+            </button>
           </li>
           <li>
-            <a href="#" className="hover:text-black transition">
+            <button
+              onClick={() => setPage("contact")}
+              className="hover:text-black transition"
+            >
               Contact
-            </a>
+            </button>
           </li>
         </ul>
 
@@ -41,5 +56,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
