@@ -23,31 +23,16 @@ const Find = () => {
 
   const isReady = gender && style;
 
-  // Data style dan gambar spesifik per gender
   const data = {
     Men: {
       styles: {
-        "Old Money": [
-          oldmoney1,
-          oldmoney2,
-          oldmoney3,
-          oldmoney4,
-          oldmoney5,
-          oldmoney6,
-        ],
+        "Old Money": [oldmoney1, oldmoney2, oldmoney3, oldmoney4, oldmoney5, oldmoney6],
         Formal: [
           "https://i.pinimg.com/736x/56/2a/07/562a07b432f02b122ee6c6c16baf418a.jpg",
           "https://i.pinimg.com/736x/8a/37/50/8a375012fd01f06c6e504d8b8b3091a1.jpg",
           "https://i.pinimg.com/736x/ed/21/16/ed2116de53ab9022eb99231b35f7e45f.jpg",
         ],
-        Skena: [
-          skena1,
-          skena2,
-          skena3,
-          skena4,
-          skena5,
-          skena6,
-        ],
+        Skena: [skena1, skena2, skena3, skena4, skena5, skena6],
       },
     },
     Women: {
@@ -63,6 +48,7 @@ const Find = () => {
       },
     },
   };
+
   const handleShowSetup = () => {
     setClicked(true);
     setTimeout(() => setShowImages(false), 1200);
@@ -74,16 +60,14 @@ const Find = () => {
 
   return (
     <section
-      className={`relative flex flex-col items-center justify-center h-screen overflow-hidden transition-all duration-1000 ${
+      className={`relative flex flex-col items-center justify-center min-h-screen overflow-hidden transition-all duration-1000 w-full ${
         clicked ? "bg-white text-black" : "bg-black text-white"
       }`}
     >
       {/* INTRO */}
       {!clicked && (
         <div className="z-20 text-center space-y-6 transition-all duration-700">
-          <h1 className="text-5xl font-semibold tracking-wide">
-            Ready to Define Your Vibe?
-          </h1>
+          <h1 className="text-5xl font-semibold tracking-wide">Ready to Define Your Vibe?</h1>
           <p className="text-gray-300 text-lg max-w-md mx-auto">
             Let’s build your outfit mood together — tailored by Lybrélle ✨
           </p>
@@ -169,19 +153,19 @@ const Find = () => {
               {isReady ? "See Your Style →" : "See Your Style"}
             </button>
 
-            {/* Gambar sesuai pilihan */}
+            {/* GAMBAR */}
             {showImages && (
-              <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 fade-up pb-10">
-                {data[gender].styles[style].map((img, i) => (
-                  <img
-                    key={i}
-                    src={img}
-                    alt={`${gender}-${style}-${i}`}
-                    className="w-full aspect-square object-cover rounded-2xl shadow-md hover:scale-105 transition-all duration-500 hover:grayscale-0 grayscale"
-                  />
-                ))}
-              </div>
-            )}
+  <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-4 fade-up max-w-5xl mx-auto">
+    {data[gender].styles[style].map((img, i) => (
+      <img
+        key={i}
+        src={img}
+        alt={`${gender}-${style}-${i}`}
+        className="w-full h-[420px] object-cover rounded-2xl shadow-lg hover:scale-105 transition-all duration-500 hover:grayscale-0 grayscale"
+      />
+    ))}
+  </div>
+)}
           </div>
         </>
       )}
