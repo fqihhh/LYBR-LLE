@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-black text-white overflow-hidden mt-40">
+    <footer className="relative bg-black text-white overflow-hidden mt-40" id="contact">
       {/* Background Text */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <h1 className="text-[5rem] sm:text-[8rem] md:text-[12rem] lg:text-[16rem] font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-white/20 via-white/10 to-transparent tracking-widest select-none leading-none text-center">

@@ -37,7 +37,7 @@ const Products = () => {
   ];
 
   return (
-    <div className="max-w-[1200px] mx-auto p-5 mt-20">
+    <div className="max-w-[1200px] mx-auto p-5 mt-20" id="products">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {products.map((product) => (
           <div key={product.id} className="relative group">

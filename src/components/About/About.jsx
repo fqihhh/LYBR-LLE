@@ -4,7 +4,7 @@ import apa2 from "../../assets/apa2.jpg";
 
 const About = () => {
   return (
-    <section className="max-w-6xl mx-auto px-6 md:px-10 py-16 bg-white text-gray-900">
+    <section className="max-w-6xl mx-auto px-6 md:px-10 py-16 bg-white text-gray-900" id="about">
       {/* Heading */}
       <div className="text-left max-w-4xl mx-auto mb-14 mr-45">
         <h1 className="text-3xl md:text-4xl font-semibold leading-snug mb-4">

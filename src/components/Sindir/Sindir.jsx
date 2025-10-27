@@ -21,7 +21,7 @@ const Sindir = () => {
               Sedikit Sindiran 😎
             </h2>
             <p className="text-lg leading-relaxed text-gray-600">
-              Lucu bet gilaa, gw ama kelompok gw mikir2 ide susah payah ampe pala pussying,
+              Keren bet yaa, gw ama kelompok gw mikir2 ide susah payah ampe pala pussying,
               ehh si pulan liat lsg <span className="text-black font-semibold">“Ctrl+C, Ctrl+V”</span> 
               Wkwkwkwkwk… kadang salut juga sih, gak semua orang punya 
               <span className="italic text-black"> keberanian COPASS segitu pede-nya.</span>  
