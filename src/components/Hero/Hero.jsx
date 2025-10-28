@@ -64,8 +64,8 @@ const Hero = () => {
             Contemporary Fashion Studio
           </p>
 
-          <h1 className="text-[70px] md:text-[110px] font-extrabold tracking-widest fade-up-delay">
-            LYBRÉLLE
+          <h1 className="text-[70px] md:text-[80px] font-extrabold tracking-widest fade-up-delay">
+           Refined Chaos
           </h1>
 
           <p className="max-w-2xl mx-auto text-gray-200 text-lg md:text-xl mt-4 fade-up-delay">

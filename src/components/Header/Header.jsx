@@ -1,4 +1,11 @@
-const Header = ({ setPage }) => {
+const Header = () => {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <nav
       id="navbar"
@@ -6,7 +13,7 @@ const Header = ({ setPage }) => {
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <h1
-          onClick={() => setPage("home")}
+          onClick={() => scrollToSection("hero")}
           className="text-2xl font-extrabold tracking-widest text-gray-900 cursor-pointer"
         >
           LYBRÉLLE
@@ -15,7 +22,7 @@ const Header = ({ setPage }) => {
         <ul className="hidden md:flex gap-8 text-gray-700 text-sm font-medium">
           <li>
             <button
-              onClick={() => setPage("home")}
+              onClick={() => scrollToSection("hero")}
               className="hover:text-black transition"
 
             >
@@ -24,7 +31,7 @@ const Header = ({ setPage }) => {
           </li>
           <li>
             <button
-              onClick={() => setPage("Products")}
+              onClick={() => scrollToSection("products")}
               className="hover:text-black transition"
             >
               Products
@@ -32,7 +39,7 @@ const Header = ({ setPage }) => {
           </li>
           <li>
             <button
-              onClick={() => setPage("about")}
+              onClick={() => scrollToSection("about")}
               className="hover:text-black transition"
             >
               About
@@ -40,7 +47,7 @@ const Header = ({ setPage }) => {
           </li>
           <li>
             <button
-              onClick={() => setPage("contact")}
+              onClick={() => scrollToSection("contact")}
               className="hover:text-black transition"
             >
               Contact
