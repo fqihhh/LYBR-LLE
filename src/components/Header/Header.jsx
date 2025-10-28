@@ -17,6 +17,7 @@ const Header = ({ setPage }) => {
             <button
               onClick={() => setPage("home")}
               className="hover:text-black transition"
+
             >
               Home
             </button>
