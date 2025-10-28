@@ -24,6 +24,7 @@ const Header = () => {
             <button
               onClick={() => scrollToSection("hero")}
               className="hover:text-black transition"
+
             >
               Home
             </button>

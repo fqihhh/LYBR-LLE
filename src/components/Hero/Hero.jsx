@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import bgImage from "../../assets/hero-bg.jpg";
 import "./Hero.css";
 
+
 const Hero = () => {
   useEffect(() => {
     const intro = document.getElementById("intro");

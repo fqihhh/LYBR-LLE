@@ -4,7 +4,9 @@ import About from "./components/About/About";
 import New from "./components/New/New";
 import Featured from "./components/Featured/Featured";
 import Products from "./components/Products/Products";
+
 import Sindir from "./components/Sindir/Sindir";
+
 import Footer from "./components/Footer/Footer";
 import Find from "./components/Find/Find";
 
