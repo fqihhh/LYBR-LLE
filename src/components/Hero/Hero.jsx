@@ -1,29 +1,46 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import bgImage from "../../assets/hero-bg.jpg";
 import "./Hero.css";
 
 
 const Hero = () => {
+  const introRef = useRef(null);
+  const heroRef = useRef(null);
+
   useEffect(() => {
-    const intro = document.getElementById("intro");
-    const hero = document.getElementById("hero");
+    const intro = introRef.current;
+    const hero = heroRef.current;
     const navbar = document.getElementById("navbar");
 
-    // Disable scroll saat loading
+    // Defensive: if refs not set, don't block scroll
+    const originalOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 
-    // Delay animasi
-    setTimeout(() => {
-      intro.classList.add("intro-reveal");
-      setTimeout(() => {
-        intro.style.display = "none";
-        hero.classList.remove("opacity-0");
-        navbar?.classList.remove("opacity-0");
+    // Keep track of timers so we can clear on unmount
+    const t1 = setTimeout(() => {
+      if (intro) intro.classList.add("intro-reveal");
+      const t2 = setTimeout(() => {
+        if (intro) intro.style.display = "none";
+        if (hero) hero.classList.remove("opacity-0");
+        if (navbar) navbar.classList.remove("opacity-0");
 
         // Enable scroll setelah animasi selesai
-        document.body.style.overflow = "auto";
+        document.body.style.overflow = originalOverflow || "auto";
       }, 2300);
+
+      // store second timer on ref so cleanup can clear both
+      intro._t2 = t2;
     }, 2500);
+
+    // store first timer as well
+    intro._t1 = t1;
+
+    return () => {
+      // cleanup timers and restore overflow
+      if (intro && intro._t1) clearTimeout(intro._t1);
+      if (intro && intro._t2) clearTimeout(intro._t2);
+      document.body.style.overflow = originalOverflow || "auto";
+    };
   }, []);
 
   return (
@@ -31,6 +48,7 @@ const Hero = () => {
       {/* INTRO */}
       <div
         id="intro"
+        ref={introRef}
         className="fixed inset-0 flex flex-col justify-center items-center bg-black text-white z-[9999]"
       >
         <h1
@@ -46,7 +64,8 @@ const Hero = () => {
 
       {/* HERO */}
       <section
-        id="hero"
+        id="home2"
+        ref={heroRef}
         className="relative min-h-[100vh] flex flex-col justify-center items-center text-center overflow-hidden opacity-0 transition-all duration-[2000ms]"
       >
         {/* Background Image */}
