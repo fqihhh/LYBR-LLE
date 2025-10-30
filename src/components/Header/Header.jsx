@@ -32,7 +32,7 @@ const Header = () => {
           <li>
             <button
               onClick={() => scrollToSection("products")}
-              className="hover:text-black transition"
+              className="hover:text-black transition "
             >
               Products
             </button>
