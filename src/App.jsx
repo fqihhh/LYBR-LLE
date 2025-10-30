@@ -3,7 +3,7 @@ import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
 import New from "./components/New/New";
 import Featured from "./components/Featured/Featured";
-import Products from "./components/Products/Products";
+// import Products from "./components/Products/Products";
 
 import Sindir from "./components/Sindir/Sindir";
 
@@ -20,7 +20,7 @@ function App() {
       <Hero />
       <New />
       <Featured />
-      <Products />
+      {/* <Products /> */}
       <About />
       <Find />
       <Sindir />

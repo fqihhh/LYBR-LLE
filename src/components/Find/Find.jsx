@@ -15,6 +15,27 @@ import oldmoney4 from "../../assets/old mony4.png";
 import oldmoney5 from "../../assets/old mony5.jpg";
 import oldmoney6 from "../../assets/old mony6.jpg";
 
+import casual1 from "../../assets/casual1.jpg";
+import casual2 from "../../assets/casual2.jpg";
+import casual3 from "../../assets/casual3.jpg";
+import casual4 from "../../assets/casual4.jpg";
+import casual5 from "../../assets/casual5.jpg";
+import casual6 from "../../assets/casual6.jpg";
+
+import skenag1 from "../../assets/skenag1.jpg";
+import skenag2 from "../../assets/skenag2.jpg";
+import skenag3 from "../../assets/skenag3.jpg";
+import skenag4 from "../../assets/skenag4.jpg";
+import skenag5 from "../../assets/skenag5.jpg";
+import skenag6 from "../../assets/skenag6.jpg";
+
+import casualg1 from "../../assets/casualg1.jpg";
+import casualg2 from "../../assets/casualg2.jpg";
+import casualg3 from "../../assets/casualg3.jpg";
+import casualg4 from "../../assets/casualg4.jpg";
+import casualg5 from "../../assets/casualg5.jpg";
+import casualg6 from "../../assets/casualg6.jpg";
+
 const Find = () => {
   const [clicked, setClicked] = useState(false);
   const [gender, setGender] = useState("");
@@ -27,23 +48,19 @@ const Find = () => {
     Men: {
       styles: {
         "Old Money": [oldmoney1, oldmoney2, oldmoney3, oldmoney4, oldmoney5, oldmoney6],
-        Formal: [
-          "https://i.pinimg.com/736x/56/2a/07/562a07b432f02b122ee6c6c16baf418a.jpg",
-          "https://i.pinimg.com/736x/8a/37/50/8a375012fd01f06c6e504d8b8b3091a1.jpg",
-          "https://i.pinimg.com/736x/ed/21/16/ed2116de53ab9022eb99231b35f7e45f.jpg",
+        "Casual": [
+          casual1, casual2, casual3, casual4, casual5, casual6
         ],
         Skena: [skena1, skena2, skena3, skena4, skena5, skena6],
       },
     },
     Women: {
       styles: {
-        "Old Money": [
-          "https://i.pinimg.com/736x/bb/87/2d/bb872dbcf1635735a8da92bb6b15f7b4.jpg",
-          "https://i.pinimg.com/736x/60/70/6b/60706bb253198fd134e44853c662d332.jpg",
+        "Casual": [
+        casualg1, casualg2, casualg3, casualg4, casualg5, casualg6
         ],
         Skena: [
-          "https://i.pinimg.com/736x/ed/80/64/ed8064c76a0b43ffb7d4f3b2c9f70e79.jpg",
-          "https://i.pinimg.com/736x/6a/72/df/6a72dfd23f9c7dce40e24e6b33b345a3.jpg",
+          skenag1, skenag2, skenag3, skenag4, skenag5, skenag6,
         ],
       },
     },
@@ -60,7 +77,7 @@ const Find = () => {
 
   return (
     <section
-      className={`relative flex flex-col items-center justify-center min-h-screen overflow-hidden transition-all duration-1000 w-full ${
+      className={`relative flex flex-col items-center justify-center min-h-screen overflow-hidden transition-all duration-1000 w-full mt-50 font-spaceGrotesk  ${
         clicked ? "bg-white text-black" : "bg-black text-white"
       }`}
     >
