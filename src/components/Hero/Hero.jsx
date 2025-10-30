@@ -64,7 +64,7 @@ const Hero = () => {
 
       {/* HERO */}
       <section
-        id="home2"
+        id="home"
         ref={heroRef}
         className="relative min-h-[100vh] flex flex-col justify-center items-center text-center overflow-hidden opacity-0 transition-all duration-[2000ms]"
       >

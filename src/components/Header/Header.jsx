@@ -4,11 +4,21 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const toggleMenu = () => setOpen((prev) => !prev);
 
+  // fungsi smooth scroll
+  const handleScroll = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setOpen(false); // auto tutup menu kalo di mobile
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50 transition-all duration-500">
       <div className="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
         {/* Logo */}
         <h1
+          onClick={() => handleScroll("home")}
           className="text-2xl font-extrabold tracking-[4px] text-gray-900 cursor-pointer hover:opacity-80 transition-all"
         >
           LYBRÉLLE
@@ -16,15 +26,15 @@ const Header = () => {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex gap-10 text-gray-700 font-medium">
-          {["home", "products", "about", "contact"].map((item) => (
-            <a
+          {["home", "about", "contact"].map((item) => (
+            <button
               key={item}
-              href={`#${item}`}
-              className="relative group transition-all capitalize"
+              onClick={() => handleScroll(item)}
+              className="relative group capitalize transition-all"
             >
               <span className="hover:text-black transition">{item}</span>
               <span className="absolute left-0 -bottom-1 w-0 group-hover:w-full h-[1.5px] bg-gray-900 transition-all duration-300"></span>
-            </a>
+            </button>
           ))}
         </nav>
 
@@ -78,15 +88,14 @@ const Header = () => {
             : "opacity-0 -translate-y-4 pointer-events-none"
         }`}
       >
-        {["home", "products", "about", "contact"].map((item) => (
-          <a
+        {["home", "about", "contact"].map((item) => (
+          <button
             key={item}
-            href={`#${item}`}
-            className="block px-5 py-2 text-gray-800 font-medium hover:bg-gray-900 hover:text-white rounded-lg transition-all capitalize"
-            onClick={() => setOpen(false)}
+            onClick={() => handleScroll(item)}
+            className="block w-full text-left px-5 py-2 text-gray-800 font-medium hover:bg-gray-900 hover:text-white rounded-lg transition-all capitalize"
           >
             {item}
-          </a>
+          </button>
         ))}
       </nav>
     </header>

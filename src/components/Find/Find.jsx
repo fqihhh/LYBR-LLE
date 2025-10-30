@@ -77,7 +77,7 @@ const Find = () => {
 
   return (
     <section
-      className={`relative flex flex-col items-center justify-center min-h-screen overflow-hidden transition-all duration-1000 w-full ${
+      className={`relative flex flex-col items-center justify-center min-h-screen overflow-hidden transition-all duration-1000 w-full mt-50 font-spaceGrotesk  ${
         clicked ? "bg-white text-black" : "bg-black text-white"
       }`}
     >
