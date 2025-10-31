@@ -4,19 +4,17 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const toggleMenu = () => setOpen((prev) => !prev);
 
-  // fungsi smooth scroll
   const handleScroll = (id) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
-      setOpen(false); // auto tutup menu kalo di mobile
+      setOpen(false);
     }
   };
 
   return (
     <header className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50 transition-all duration-500">
       <div className="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
-        {/* Logo */}
         <h1
           onClick={() => handleScroll("home")}
           className="text-2xl font-extrabold tracking-[4px] text-gray-900 cursor-pointer hover:opacity-80 transition-all"
@@ -24,7 +22,6 @@ const Header = () => {
           LYBRÉLLE
         </h1>
 
-        {/* Desktop Menu */}
         <nav className="hidden md:flex gap-10 text-gray-700 font-medium">
           {["home", "about", "contact"].map((item) => (
             <button
@@ -38,7 +35,6 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Hamburger Button */}
         <button
           type="button"
           className="md:hidden flex items-center justify-center p-2 rounded-md text-gray-900 hover:bg-gray-100 transition-all relative z-[100]"
@@ -79,7 +75,6 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       <nav
         id="menu"
         className={`absolute top-full right-4 w-48 bg-white/95 backdrop-blur-lg shadow-lg rounded-2xl py-4 space-y-3 transform transition-all duration-500 md:hidden ${
