@@ -6,9 +6,9 @@ const About = () => {
       id="about"
       className="min-h-screen flex flex-col md:flex-row items-center justify-center gap-14 px-6 md:px-16 py-24 bg-white text-gray-900 relative overflow-hidden"
     >
-      {/* Background blur efek elegan */}
-      <div className="absolute inset-0 bg-gradient-to-r from-gray-50 via-white to-gray-50 opacity-80 -z-10"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] bg-gradient-to-br from-gray-200/30 to-gray-100/10 blur-3xl -z-10"></div>
+      {/* Background subtle blur */}
+      <div className="absolute inset-0 bg-gradient-to-r from-gray-50 via-white to-gray-100 opacity-90 -z-10"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[95%] h-[90%] bg-gradient-to-br from-gray-300/20 to-gray-50/10 blur-3xl -z-10"></div>
 
       {/* Image Section */}
       <div className="md:w-1/2 flex justify-center md:justify-end relative group">
@@ -24,25 +24,31 @@ const About = () => {
       {/* Text Section */}
       <div className="md:w-1/2 flex flex-col justify-center md:items-start items-center text-center md:text-left space-y-6">
         <h2 className="text-4xl md:text-5xl font-extrabold tracking-wide leading-tight">
-          The Essence of <span className="text-gray-700">Lybrélle</span>
+          Behind the Name <span className="text-gray-700">LYBRÉLLE</span>
         </h2>
 
         <p className="text-gray-600 leading-relaxed max-w-md text-lg">
-          Lybrélle is more than just fashion — it’s a statement of confidence,
-          comfort, and self-expression. Every piece is thoughtfully crafted to
-          reflect timeless beauty and modern simplicity.
+          LYBRÉLLE is not a trend — it’s a rhythm.  
+          A slow burn between silence and statement.  
+          Designed for those who move differently, who don’t chase attention,  
+          but *command it effortlessly.*
         </p>
 
         <p className="text-gray-600 leading-relaxed max-w-md">
-          From the fabric to the fit, we bring you elegance that feels as good
-          as it looks — because your comfort defines true luxury.
+          Every creation is a balance of precision and ease —  
+          where structure meets softness, and minimalism meets emotion.  
+          It’s not just what you wear. It’s how you exist in it.
         </p>
 
         <button
           type="button"
+          onClick={() => {
+            const section = document.getElementById("featured");
+            if (section) section.scrollIntoView({ behavior: "smooth" });
+          }}
           className="mt-4 bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition duration-300 shadow-md hover:shadow-lg"
         >
-          Discover More
+          Explore the Vision
         </button>
       </div>
     </section>

@@ -19,9 +19,9 @@ function App() {
       <Header />
       <Hero />
       <New />
+      <About />
       <Featured />
       {/* <Products /> */}
-      <About />
       <Find />
       <Sindir />
       <Footer />
