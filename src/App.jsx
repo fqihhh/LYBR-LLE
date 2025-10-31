@@ -16,8 +16,10 @@ function App() {
       <Header />
       <Hero />
       <New />
+      <About />
       <Featured />
       <About />
+
       <Find />
       <Sindir />
       <Footer />
