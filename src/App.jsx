@@ -18,8 +18,6 @@ function App() {
       <New />
       <About />
       <Featured />
-      <About />
-
       <Find />
       <Sindir />
       <Footer />

@@ -12,7 +12,7 @@ const Sindir = () => {
           onClick={() => setShow(!show)}
           className="mb-10 px-8 py-3 bg-black text-white font-semibold rounded-full hover:scale-105 hover:bg-gray-900 transition-all duration-300 shadow-lg"
         >
-          {show ? "Udah nyesek belum? 😏" : "Jangan dipencet, nanti panas 🔥"}
+          {show ? "Udah nyesek belum? 😏" : "Don't touch🔥"}
         </button>
 
         {/* Container sindiran pertama */}
